@@ -12,6 +12,11 @@ notifyMeButton?.addEventListener("click", () => {
   if (modal) {
     modal.style.display = "block";
   }
+  if (homePage && aboutUs && closeButton) {
+    homePage.style.width = "100%";
+    aboutUs.style.left = "100%";
+    closeButton.style.display = "none";
+  }
 });
 
 modalCloseButton?.addEventListener("click", () => {

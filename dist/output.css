@@ -941,6 +941,10 @@ video {
   letter-spacing: 4px;
 }
 
+.tracking-wide{
+  letter-spacing: 0.025em;
+}
+
 .text-gray-100{
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
