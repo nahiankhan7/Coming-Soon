@@ -20,6 +20,7 @@
     </style>
   </head>
   <body class="relative w-[100%] h-dvh overflow-hidden">
+    <!-- home page  -->
     <div
       id="homePage"
       class="bg-img h-dvh w-[100%] flex flex-col justify-center items-center font-roboto absolute left-0 top-0 transition-all ease-in-out duration-1000">
@@ -42,12 +43,56 @@
       </div>
     </div>
 
+    <!--popup modal -->
+    <div id="modal" class="hidden">
+      <div
+        class="bg-transparent flex justify-center items-center w-[100%] h-dvh absolute">
+        <div class="bg-zinc-800 w-[600px] shadow-lg shadow-slate-800">
+          <button id="modalClose" class="mt-4 pr-6 w-full flex justify-end">
+            <i
+              class="fa-solid fa-xmark text-2xl cursor-pointer text-gray-400 hover:text-gray-200 transition duration-200"></i>
+          </button>
+
+          <div class="flex flex-col justify-center items-center mt-2">
+            <h2 class="uppercase text-3xl font-light text-gray-300 my-6">
+              Stay
+              <span class="uppercase text-gray-300 font-semibold">Tuned</span>
+            </h2>
+            <div class="w-[50px] h-[1.5px] bg-slate-300"></div>
+            <div class="max-w-[320px] my-7">
+              <p class="text-center text-[13.5px] w-full text-gray-300">
+                We launch our new website soon.<br />
+                Please stay updated and follow.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex justify-center items-center mt-8 mb-16">
+            <input
+              type="text"
+              placeholder="enter your email here..."
+              class="py-2 px-0 w-[60%] text-gray-100 bg-transparent outline-none border-t-0 border-x-0 border-b-2 border-gray-500 hover:border-gray-300 duration-200 peer focus:border-gray-200 placeholder:uppercase" />
+            <button
+              class="bg-emerald-700 duration-200 hover:bg-emerald-800 text-gray-300 hover:text-gray-200 focus:text-gray-50 px-4 py-[5px]">
+              <i class="fa-solid fa-arrow-right-long text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- About -->
+    <button
+      id="closeButton"
+      class="absolute hidden bg-gray-100 mt-3 w-[50px] left-[47%]">
+      <i
+        class="fa-solid fa-xmark text-3xl cursor-pointer text-slate-600 hover:text-gray-900 transition duration-200"></i>
+    </button>
     <div
       id="aboutUs"
       class="bg-gray-100 absolute h-dvh w-[50%] left-[100%] overflow-x-auto transition-all ease-in-out duration-1000">
       <!-- header text  -->
-      <div class="flex flex-col justify-center items-center mt-12">
+      <div class="flex flex-col justify-center items-center mt-10">
         <h2 class="uppercase text-3xl font-light text-gray-500 my-5">
           about <span class="uppercase text-gray-800 font-semibold">us</span>
         </h2>
@@ -167,14 +212,14 @@
             send message
           </button>
 
-          <div class="flex justify-center gap-x-5 items-center px-2 my-8">
+          <div class="flex justify-center gap-x-5 items-center px-2 mb-8 mt-12">
             <div class="flex items-center justify-center gap-x-3">
               <i class="fa-solid fa-location-dot text-2xl text-gray-600"></i>
               <address class="text-center text-sm text-gray-500">
                 West Kafrul, Mollapara,<br />Mukti Housing Road, Dhaka
               </address>
             </div>
-            <span class="bg-slate-500 w-[2px] h-[50px]"></span>
+            <span class="bg-slate-500 w-[2px] h-[80px]"></span>
 
             <div class="flex items-center justify-center gap-x-3">
               <i class="fa-solid fa-phone text-1xl text-gray-600"></i>
