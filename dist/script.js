@@ -5,23 +5,18 @@ const closeButton = document.getElementById("closeButton");
 const homePage = document.getElementById("homePage");
 const aboutUs = document.getElementById("aboutUs");
 
-const modal = document.getElementById("modal");
+const modal = document.getElementById("modalWrapper");
 const modalCloseButton = document.getElementById("modalClose");
 
 notifyMeButton?.addEventListener("click", () => {
   if (modal) {
-    modal.style.display = "block";
-  }
-  if (homePage && aboutUs && closeButton) {
-    homePage.style.width = "100%";
-    aboutUs.style.left = "100%";
-    closeButton.style.display = "none";
+    modal.classList.remove("hidden");
   }
 });
 
 modalCloseButton?.addEventListener("click", () => {
   if (modal) {
-    modal.style.display = "none";
+    modal.classList.add("hidden");
   }
 });
 
