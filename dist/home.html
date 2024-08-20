@@ -11,6 +11,10 @@
     <!-- tailwindCSS output link -->
     <link rel="stylesheet" href="./output.css" />
     <style>
+      body,
+      html {
+        scroll-behavior: smooth;
+      }
       .bg-img {
         background-image: url(./images/sea.jpg);
         background-repeat: no-repeat;
@@ -19,11 +23,11 @@
       }
     </style>
   </head>
-  <body class="relative w-[100%] h-dvh overflow-hidden">
+  <body class="relative w-[100%] h-dvh lg:overflow-hidden font-roboto">
     <!-- home page  -->
     <div
       id="homePage"
-      class="bg-img h-dvh w-[100%] flex flex-col justify-center items-center font-roboto absolute left-0 top-0 transition-all ease-in-out duration-1000">
+      class="bg-img h-dvh lg:absolute lg:left-0 lg:top-0 w-[100%] flex flex-col justify-center items-center transition-all ease-in-out duration-1000">
       <div class="item-text text-center text-white">
         <h3 class="uppercase tracking-space text-5xl font-light mb-1">
           we're launching our
@@ -39,7 +43,10 @@
       <i class="fa-solid fa-arrow-down-long text-gray-300 text-2xl mb-8"></i>
       <div class="info-btn text-white flex justify-center items-center gap-x-3">
         <button class="btn-green" id="notifyMe">notify me</button>
-        <button class="btn-gray" id="moreInfo">more info</button>
+        <button class="btn-gray md:hidden lg:block" id="moreInfo">
+          more info
+        </button>
+        <a class="btn-gray lg:hidden" href="#aboutUs">more info</a>
       </div>
     </div>
 
@@ -73,7 +80,7 @@
               placeholder="enter your email here..."
               class="py-2 px-0 w-[60%] text-gray-100 bg-transparent outline-none border-t-0 border-x-0 border-b-2 border-gray-500 hover:border-gray-300 duration-200 peer focus:border-gray-200 placeholder:uppercase" />
             <button
-              class="bg-emerald-700 duration-200 hover:bg-emerald-800 text-gray-300 hover:text-gray-200 focus:text-gray-50 px-4 py-[5px]">
+              class="bg-emerald-700 duration-200 hover:bg-emerald-800 text-gray-300 hover:text-gray-200 focus:text-gray-50 px-4 py-[4.5px]">
               <i class="fa-solid fa-arrow-right-long text-2xl"></i>
             </button>
           </div>
@@ -88,11 +95,12 @@
       <i
         class="fa-solid fa-xmark text-3xl cursor-pointer text-slate-600 hover:text-gray-900 transition duration-200"></i>
     </button>
+
     <div
       id="aboutUs"
-      class="bg-gray-100 absolute h-dvh w-[50%] left-[100%] overflow-x-auto transition-all ease-in-out duration-1000">
+      class="bg-gray-100 lg:absolute lg:h-dvh lg:w-[50%] lg:left-[100%] lg:overflow-x-auto transition-all ease-in-out duration-1000">
       <!-- header text  -->
-      <div class="flex flex-col justify-center items-center mt-10">
+      <div class="flex flex-col justify-center items-center mt-8 mb-12">
         <h2 class="uppercase text-3xl font-light text-gray-500 my-5">
           about <span class="uppercase text-gray-800 font-semibold">us</span>
         </h2>
@@ -163,9 +171,9 @@
       </div>
 
       <!-- contact section -->
-      <div class="">
+      <div class="my-12">
         <!-- header text  -->
-        <div class="flex flex-col justify-center items-center mt-12">
+        <div class="flex flex-col justify-center items-center my-10">
           <h2 class="uppercase text-3xl font-semibold text-gray-800 my-5">
             contact
           </h2>

@@ -5,7 +5,7 @@
 
 /* group utilities */
 .btn-green {
-     @apply uppercase ring-1 ring-gray-400 bg-emerald-600 rounded-l-md bg-opacity-50 hover:bg-opacity-80 shadow-md px-4 py-2 transition-all duration-300 ease-in-out transform;
+     @apply uppercase ring-1 ring-gray-400 bg-emerald-600 rounded-tl-md rounded-br-md bg-opacity-50 hover:bg-opacity-80 shadow-md px-4 py-2 transition-all duration-300 ease-in-out transform;
      /* Focus State */
      @apply focus:ring-2 focus:ring-gray-200 focus:bg-opacity-70 focus:shadow-lg focus:outline-none;
      /* Active State */
@@ -13,7 +13,7 @@
 }
 
 .btn-gray {
-     @apply uppercase ring-1 ring-gray-400 bg-gray-700 rounded-r-md bg-opacity-50 hover:bg-opacity-80 shadow-md px-4 py-2 transition-all duration-300 ease-in-out transform;
+     @apply uppercase ring-1 ring-gray-400 bg-gray-700 rounded-tl-md rounded-br-md bg-opacity-50 hover:bg-opacity-80 shadow-md px-4 py-2 transition-all duration-300 ease-in-out transform;
      /* Focus State */
      @apply focus:ring-2 focus:ring-gray-200 focus:bg-opacity-70 focus:shadow-lg focus:outline-none;
      /* Active State */
