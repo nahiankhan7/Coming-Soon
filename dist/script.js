@@ -60,17 +60,19 @@ closeButton?.addEventListener("click", () => {
 });
 
 // Reverse countdown timer
-const startDate = new Date("Aug 21, 2024 00:00:00").getTime();
+const startDate = new Date("Aug 21, 2025 00:00:00").getTime();
 const x = setInterval(() => {
   // Countdown DOM elements
   const showDays = document.getElementById("days");
   const showHours = document.getElementById("hours");
-  const showMinutes = document.getElementById("minutes");
-  const showSeconds = document.getElementById("seconds");
+  const showMinutes = document.getElementById("minute");
+  const showSeconds = document.getElementById("second");
 
+  // get new date
   const currentTime = new Date().getTime();
   const distance = startDate - currentTime;
 
+  // calculate time
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
     (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -78,6 +80,7 @@ const x = setInterval(() => {
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+  // add DOM
   showDays.innerHTML = days;
   showHours.innerHTML = hours;
   showMinutes.innerHTML = minutes;
