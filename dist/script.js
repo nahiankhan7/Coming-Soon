@@ -82,9 +82,9 @@ const x = setInterval(() => {
 
   // add DOM
   showDays.innerHTML = days;
-  showHours.innerHTML = hours;
-  showMinutes.innerHTML = minutes;
-  showSeconds.innerHTML = seconds;
+  showHours.innerHTML = hours < 10 ? "0" + hours : hours;
+  showMinutes.innerHTML = minutes < 10 ? "0" + minutes : minutes;
+  showSeconds.innerHTML = seconds < 10 ? "0" + seconds : seconds;
 
   if (distance < 0) {
     clearInterval(x);
